@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*All*/
+body{
+    background-image: url(/Imagenes/Snow\ Background.jpg);
+    background-repeat: repeat;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+div{
+    overflow: auto;
+}
+.links{
+    width: fit-content;
+    list-style-type: none;
+    margin: 20px;
+}
+nav li{
+    background-color: burlywood;
+    opacity: 0.8;
+}
+nav li:hover{
+    background-color: darkgoldenrod;
+    opacity: 1;
+}
+body div header{
+    margin: 20px;
+    padding: 100px; 
+    border: black 15px double;
+    text-align: center;
+}
+body div header h1{
+    font-family: 'Palette Mosaic', cursive;
+    font-weight: bold;
+    font-size: 150px;    
+}
+main{
+    font-family: 'Abril Fatface', cursive;
+    overflow: auto;
+    display: inline-block;
+}
+main section{
+    overflow: auto;
+    padding: 20px;
+    display: inline-block; 
+}
+section{
+    overflow: auto;
+}
+.titulo{
+    font-size: 150px;
+    text-align: center;
+    font-family: 'Palette Mosaic', cursive;
+    font-weight: bold;
+}
+footer h4{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+footer a{    
+    font-family: 'Press Start 2P', cursive;
+}
+/*index*/
+.animate__animated .animate__fadeInUp{
+    animation: fadeinup;
+    animation-duration: 5s;
+}
+.novedades{
+    overflow: auto;
+    display: inline-block;    
+}
+.videos{
+    overflow: auto;  
+    display: inline-block; 
+}
+.shows{
+    overflow: auto;
+    display: inline-block; 
+}
+.contacto{
+    overflow: auto;
+    display: inline-block; 
+}
+.disc{
+    overflow: auto;
+    display: inline-block; 
+}
+.disc img{
+    width: 500px;
+}
+.app{
+    grid-area: app;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 90%;
+    overflow: auto;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    transition: all 2s;
+}
+.app:hover{
+    transform: translate(-20px);
+}
+/*bandhistory*/
+
+/*discography*/
+.discography{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "imgDisc imgDisc imgDisc imgDisc imgDisc imgDisc"
+        "nameDisc nameDisc nameDisc nameDisc nameDisc nameDisc"
+        "audioDisc audioDisc audioDisc audioDisc audioDisc audioDisc"
+        "infoDisc infoDisc infoDisc infoDisc infoDisc infoDisc";
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        justify-content: stretch;
+}
+.imgDisc{
+    grid-area: imgDisc;
+    display: grid;
+        grid-column-gap: 20px;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.nameDisc{
+    text-align: center;
+    grid-area: nameDisc;
+    display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.audioDisc{
+    margin-left: 25px;
+    grid-area: audioDisc;
+    display: grid;
+        width: 100%;
+        grid-column-gap: 20px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "d1 d2 d3 d4 d5 d6";
+}
+.infoDisc{
+    text-align: left;
+    grid-area: infoDisc;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    "d1 d2 d3 d4 d5 d6"; 
+}
+/*videos*/
+.vid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "vi1 vi2 vi3"
+    "vi4 vi5 vi6";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: stretch;
+}
+/*contact*/
+.form{
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    text-align: center;
+}
+#coment{
+    width: 100%;
+}
+/*estilo <1024px*/
+@media only screen and (max-width: 1024px){
+    /*All*/
+    h2{
+        font-size: smaller;
+    }
+    a{
+        font-size: smaller;
+    }
+    main{
+        margin: 5px;
+    }
+    footer{
+        font-size: smaller;
+        text-align: center;
+    }
+    /*index*/
+    .app{
+        display: none;
+    }
+    /*bandHistory*/
+
+    /*discography*/
+
+    /*videos*/
+
+    /*contact*/
+}
