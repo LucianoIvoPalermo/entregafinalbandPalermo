@@ -68,27 +68,7 @@ footer a{
 .animate__animated .animate__fadeInUp{
     animation: fadeinup;
     animation-duration: 5s;
-}
-.novedades{
-    overflow: auto;
-    display: inline-block;    
-}
-.videos{
-    overflow: auto;  
-    display: inline-block; 
-}
-.shows{
-    overflow: auto;
-    display: inline-block; 
-}
-.contacto{
-    overflow: auto;
-    display: inline-block; 
-}
-.disc{
-    overflow: auto;
-    display: inline-block; 
-}
+}       
 .disc img{
     width: 500px;
 }
@@ -109,71 +89,8 @@ footer a{
 /*bandhistory*/
 
 /*discography*/
-.discography{
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-        "imgDisc imgDisc imgDisc imgDisc imgDisc imgDisc"
-        "nameDisc nameDisc nameDisc nameDisc nameDisc nameDisc"
-        "audioDisc audioDisc audioDisc audioDisc audioDisc audioDisc"
-        "infoDisc infoDisc infoDisc infoDisc infoDisc infoDisc";
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-        justify-content: stretch;
-}
-.imgDisc{
-    grid-area: imgDisc;
-    display: grid;
-        grid-column-gap: 20px;
-        width: 100%;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 
-        "d1 d2 d3 d4 d5 d6";
-}
-.nameDisc{
-    text-align: center;
-    grid-area: nameDisc;
-    display: grid;
-        width: 100%;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 
-        "d1 d2 d3 d4 d5 d6";
-}
-.audioDisc{
-    margin-left: 25px;
-    grid-area: audioDisc;
-    display: grid;
-        width: 100%;
-        grid-column-gap: 20px;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 
-        "d1 d2 d3 d4 d5 d6";
-}
-.infoDisc{
-    text-align: left;
-    grid-area: infoDisc;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 20px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: 
-    "d1 d2 d3 d4 d5 d6"; 
-}
+
 /*videos*/
-.vid{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-    "vi1 vi2 vi3"
-    "vi4 vi5 vi6";
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-content: stretch;
-}
 /*contact*/
 .form{
     margin: 20px;
