@@ -1,130 +1,91 @@
+$title-font: 'Palette Mosaic', cursive;
+$text-font: 'Abril Fatface', cursive;
+$pixel-font: 'Press Start 2P', cursive;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*All*/
 body{
-    background-image: url(/Imagenes/Snow\ Background.jpg);
-    background-repeat: repeat;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     color: black;
-    font-family: 'Press Start 2P', cursive;
+    font-family: $pixel-font;
+    div{
+        overflow: auto;
+        nav li{
+            background-color: burlywood;
+            opacity: 0.8;
+            &:hover{
+                background-color: darkgoldenrod;
+                opacity: 1;
+            }
+        }
+        header{
+            margin: 20px;
+            padding: 100px; 
+            border: black 15px double;
+            text-align: center;
+            h1{
+                font-family: $title-font;
+                font-weight: bold;
+                font-size: 150px;
+                .animate__animated .animate__fadeInUp{
+                    animation: fadeinup;
+                    animation-duration: 5s;
+                }
+            }
+        }
+    }
+    main{
+        font-family: $text-font;
+        overflow: auto;
+        display: inline-block;
+        section{
+            overflow: auto;
+            padding: 20px;
+            display: inline-block; 
+        }
+    }
 }
-div{
-    overflow: auto;
-}
-.links{
-    width: fit-content;
-    list-style-type: none;
-    margin: 20px;
-}
-nav li{
-    background-color: burlywood;
-    opacity: 0.8;
-}
-nav li:hover{
-    background-color: darkgoldenrod;
-    opacity: 1;
-}
-body div header{
-    margin: 20px;
-    padding: 100px; 
-    border: black 15px double;
-    text-align: center;
-}
-body div header h1{
-    font-family: 'Palette Mosaic', cursive;
-    font-weight: bold;
-    font-size: 150px;    
-}
-main{
-    font-family: 'Abril Fatface', cursive;
-    overflow: auto;
-    display: inline-block;
-}
-main section{
-    overflow: auto;
-    padding: 20px;
-    display: inline-block; 
-}
-section{
-    overflow: auto;
-}
-.titulo{
-    font-size: 150px;
-    text-align: center;
-    font-family: 'Palette Mosaic', cursive;
-    font-weight: bold;
-}
-footer h4{
+footer {
+    h4{
     font-size: 20px;
     text-align: center;
-    font-family: 'Abril Fatface', cursive;
-}
-footer a{    
-    font-family: 'Press Start 2P', cursive;
-}
-/*index*/
-.animate__animated .animate__fadeInUp{
-    animation: fadeinup;
-    animation-duration: 5s;
-}       
-.disc img{
-    width: 500px;
-}
+    font-family: $text-font;
+    }
+    a{    
+        font-family: $pixel-font;
+    }
+} 
 .app{
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    font-family: $pixel-font;
     margin-left: 90%;
     overflow: auto;
     display: inline-block;
     position: fixed;
     top: 0;
     transition: all 2s;
+    &:hover{
+        transform: translate(-80px);
+    }
 }
-.app:hover{
-    transform: translate(-20px);
-}
-/*bandhistory*/
+@import "_bandhistory.scss";
+@import "_discography.scss";
+@import "_videos.scss";
+@import "_contact.scss";
 
-/*discography*/
-
-/*videos*/
-/*contact*/
-.form{
-    margin: 20px;
-    padding: 20px;
-    width: 500px;
-    text-align: center;
-}
-#coment{
-    width: 100%;
-}
 /*estilo <1024px*/
 @media only screen and (max-width: 1024px){
     /*All*/
-    h2{
+    h1,h2,a,footer{
         font-size: smaller;
-    }
-    a{
-        font-size: smaller;
-    }
-    main{
-        margin: 5px;
     }
     footer{
-        font-size: smaller;
         text-align: center;
     }
-    /*index*/
     .app{
         display: none;
     }
-    /*bandHistory*/
-
-    /*discography*/
-
-    /*videos*/
-
-    /*contact*/
 }

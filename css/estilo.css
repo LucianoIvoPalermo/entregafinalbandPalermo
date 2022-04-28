@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: black;
+  font-family: "Press Start 2P", cursive;
+}
+
+body div {
+  overflow: auto;
+}
+
+body div nav li {
+  background-color: burlywood;
+  opacity: 0.8;
+}
+
+body div nav li:hover {
+  background-color: darkgoldenrod;
+  opacity: 1;
+}
+
+body div header {
+  margin: 20px;
+  padding: 100px;
+  border: black 15px double;
+  text-align: center;
+}
+
+body div header h1 {
+  font-family: "Palette Mosaic", cursive;
+  font-weight: bold;
+  font-size: 150px;
+}
+
+body div header h1 .animate__animated .animate__fadeInUp {
+  animation: fadeinup;
+  animation-duration: 5s;
+}
+
+body main {
+  font-family: "Abril Fatface", cursive;
+  overflow: auto;
+  display: inline-block;
+}
+
+body main section {
+  overflow: auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+footer h4 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+}
+
+footer a {
+  font-family: "Press Start 2P", cursive;
+}
+
+.app {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 90%;
+  overflow: auto;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  transition: all 2s;
+}
+
+.app:hover {
+  transform: translate(-80px);
+}
+
+.titulo {
+  font-size: 150px;
+  text-align: center;
+  font-family: 'Palette Mosaic', cursive;
+  font-weight: bold;
+}
+
+/*estilo <1024px*/
+@media only screen and (max-width: 1024px) {
+  /*All*/
+  h1, h2, a, footer {
+    font-size: smaller;
+  }
+  footer {
+    text-align: center;
+  }
+  .app {
+    display: none;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
