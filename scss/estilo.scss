@@ -1,6 +1,12 @@
 $title-font: 'Palette Mosaic', cursive;
 $text-font: 'Abril Fatface', cursive;
 $pixel-font: 'Press Start 2P', cursive;
+$vista:mobile;
+$h1Mobile: 25px;
+$parrafoMobile: 15px;
+$bgsection: green;
+$violet: violet;
+$text: silver;
 
 *{
     margin: 0;
@@ -48,7 +54,7 @@ body{
         }
     }
 }
-footer {
+footer{
     h4{
     font-size: 20px;
     text-align: center;
@@ -76,9 +82,9 @@ footer {
 @import "_videos.scss";
 @import "_contact.scss";
 
-/*estilo <1024px*/
-@media only screen and (max-width: 1024px){
-    /*All*/
+body{
+@if $vista == desktop{
+    @media only screen and (min-width:1024px){
     h1,h2,a,footer{
         font-size: smaller;
     }
@@ -87,5 +93,48 @@ footer {
     }
     .app{
         display: none;
+    }
+    }
+}
+@else if $vista == mobile{
+    @media only screen and (max-width:767px){
+        h1{font-size:$h1Mobile;}
+        p{font-size:$parrafoMobile;}
+        iframe{width: 480px; height: 360px;}
+        .app{display: none;}
+    }
+}   
+@else{
+    h2{text-align: center;}
+    h1{font-size:$h1Mobile;}
+    p{font-size:$parrafoMobile/8;}
+    iframe{width: 480px; height: 360px;}
+}
+}
+@mixin section($bgsection){
+    background-color: $bgsection;
+    h2{
+        color:$violet;
+    }
+    p{
+        color:$text;
+    }
+}
+.novedades{
+    @include section ($bgsection)
+}
+.videos{
+    @include section ($bgsection)
+}
+.shows{
+    @include section ($bgsection)
+}
+.row{
+    border: 5px red solid;
+    display: flex;
+    .novedades{
+        @extend .row;
+        border: 10px fuchsia solid;
+        color: white;
     }
 }

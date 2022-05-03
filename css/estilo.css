@@ -86,17 +86,65 @@ footer a {
   font-weight: bold;
 }
 
-/*estilo <1024px*/
-@media only screen and (max-width: 1024px) {
-  /*All*/
-  h1, h2, a, footer {
-    font-size: smaller;
+@media only screen and (max-width: 767px) {
+  body h1 {
+    font-size: 25px;
   }
-  footer {
-    text-align: center;
+  body p {
+    font-size: 15px;
   }
-  .app {
+  body iframe {
+    width: 480px;
+    height: 360px;
+  }
+  body .app {
     display: none;
   }
+}
+
+.novedades {
+  background-color: green;
+}
+
+.novedades h2 {
+  color: violet;
+}
+
+.novedades p {
+  color: silver;
+}
+
+.videos {
+  background-color: green;
+}
+
+.videos h2 {
+  color: violet;
+}
+
+.videos p {
+  color: silver;
+}
+
+.shows {
+  background-color: green;
+}
+
+.shows h2 {
+  color: violet;
+}
+
+.shows p {
+  color: silver;
+}
+
+.row, .row .novedades {
+  border: 5px red solid;
+  display: flex;
+}
+
+.row .novedades {
+  border: 10px fuchsia solid;
+  color: white;
 }
 /*# sourceMappingURL=estilo.css.map */
