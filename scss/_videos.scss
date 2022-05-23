@@ -1,1 +1,11 @@
-iframe{width: 480px; height: 360px;}
+body{
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    iframe{
+        width: 480px; height: 360px;
+    }
+}

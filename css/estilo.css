@@ -1,3 +1,4 @@
+/*Generales*/
 * {
   margin: 0;
   padding: 0;
@@ -5,66 +6,48 @@
 }
 
 body {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  color: black;
+  background-color: #a56800;
+  background-image: linear-gradient(270deg, #a56800 0%, #ffbf65 100%);
   font-family: "Press Start 2P", cursive;
 }
 
-@media only screen and (max-width: 767px) {
-  body h1 {
-    font-size: 75px;
-  }
-  body p {
-    font-size: 15px;
-  }
-  body iframe {
-    width: 480px;
-    height: 360px;
-  }
-  body .app {
-    display: none;
-  }
-}
-
-body div {
-  overflow: auto;
-}
-
-body div nav li {
+body nav li {
   background-color: burlywood;
   opacity: 0.8;
 }
 
-body div nav li:hover {
+body nav li:hover {
   background-color: darkgoldenrod;
   opacity: 1;
 }
 
-body div header {
+body header {
   margin: 20px;
   padding: 100px;
   border: black 15px double;
   text-align: center;
 }
 
-body div header h1 {
+body header h1 {
   font-family: "Rubik Glitch", cursive;
   font-weight: bold;
-  font-size: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-body div header h1 .animate__animated .animate__fadeInUp {
+body header h1 .animate__animated .animate__fadeInUp {
   animation: fadeinup;
   animation-duration: 5s;
 }
 
-body div h2 {
+body h2 {
   text-align: center;
 }
 
 body main {
   font-family: "Lato", sans-serif;
-  overflow: auto;
   display: inline-block;
 }
 
@@ -84,12 +67,137 @@ footer a {
   font-family: "Press Start 2P", cursive;
 }
 
+.titulo {
+  margin-top: 30px;
+  font-size: 150px;
+  text-align: center;
+  font-family: "Rubik Glitch", cursive;
+  font-weight: bold;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 400px;
+  height: 0;
+  overflow: hidden;
+}
+
+.embed-container iframe {
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-container img {
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+div {
+  padding: 5px;
+}
+
+body section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body iframe {
+  width: 480px;
+  height: 360px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body h1 {
+    font-size: 130px;
+  }
+  body iframe {
+    width: 480px;
+    height: 360px;
+  }
+  body .carousel {
+    width: 550px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body h1 {
+    font-size: 100px;
+  }
+  body iframe {
+    width: 360px;
+    height: 240px;
+  }
+  body .app {
+    display: none;
+  }
+  body .carousel {
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body h1 {
+    font-size: 50px;
+  }
+  body p {
+    font-size: 15px;
+  }
+  body iframe {
+    width: 360px;
+    height: 240px;
+  }
+  body .app {
+    display: none;
+  }
+  body .carousel {
+    width: 330px;
+    height: 330px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*index*/
+.videos, .contacto, .disc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .app {
   text-align: center;
   font-family: "Press Start 2P", cursive;
   margin-left: 90%;
   overflow: auto;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   transition: all 2s;
@@ -99,26 +207,12 @@ footer a {
   transform: translate(-80px);
 }
 
-.titulo {
-  margin-top: 30px;
-  font-size: 150px;
-  text-align: center;
-  font-family: "Rubik Glitch", cursive;
-  font-weight: bold;
+.app img {
+  width: 150px;
+  height: 120px;
 }
 
-iframe {
-  width: 480px;
-  height: 360px;
-}
-
-img {
-  width: 480px;
-  height: 360px;
-}
-
-iframe {
-  width: 480px;
-  height: 360px;
+.app p {
+  font-size: 20px;
 }
 /*# sourceMappingURL=estilo.css.map */
